@@ -11,15 +11,15 @@ function two(req, res, next) {
 }
 
 polka()
-  // .use(one, two)
+  .use(one, two)
   .get('/', (req, res) => {
     console.log('root');
     res.end('got to root');
   })
-  .get('/:inst/:command', (req, res) => {
+  /* .get('/:inst/:command', (req, res) => {
     res.end('Hello');
     console.log(req.params);
-  })
+  }) */
   .get('/users/:id', (req, res) => {
     console.log(`~> Hello, ${req.hello}`);
     res.end(`User: ${req.params.id}`);
