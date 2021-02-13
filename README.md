@@ -1,1 +1,3 @@
-# node-polka-docker-template
+# node-polka-docker
+
+Attempt to test node polka server with docker
