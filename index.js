@@ -20,9 +20,13 @@ polka()
     res.end('Hello');
     console.log(req.params);
   }) */
-  .get('/users/:id', (req, res) => {
+  .get('/posts', (req, res) => {
+    console.log(`~> Hello, posts`);
+    res.end(`Posts: post1, post2, ...`);
+  })
+  .get('/posts/:id', (req, res) => {
     console.log(`~> Hello, ${req.hello}`);
-    res.end(`User: ${req.params.id}`);
+    res.end(`Post: ${req.params.id}`);
   })
   .listen(5000, err => {
     if (err) throw err;
